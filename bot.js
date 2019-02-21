@@ -9,6 +9,7 @@ const wait = require('util').promisify(setTimeout);
 client.on("message", function(message) {
   let command = message.content.split(" ")[0];
   let email = message.content.split(" ").slice(1);
+  let email = message.content.split(" ").slice(2);
     if(command == 'test') {
         message.channel.send(email.join("  "))
     }
