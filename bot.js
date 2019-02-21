@@ -7,12 +7,10 @@ const wait = require('util').promisify(setTimeout);
 
 
 client.on("message", function(message) {
-    var  / = (1:2)
-    var args = message.content.split(/ /);
-    var command = args.shift()
-    var email = args.shift( /)
+  let command = message.content.split(" ")[0];
+  let email = message.content.split(" ").slice(1);
     if(command == 'test') {
-        message.channel.send(email)
+        message.channel.send(email.join("  "))
     }
 });
 
