@@ -7,7 +7,7 @@ const wait = require('util').promisify(setTimeout);
 
 
 client.on("message", function(message) {
-    var args = message.content.split(/ 1:2/);
+    var args = message.content.split(1 2:3);
     var command = args.shift()
     var email = args.shift(2)
     if(command == 'test') {
